@@ -1,0 +1,23 @@
+name: CleanUp
+on:
+  push:
+    branches:
+      - master
+  pull_request: 
+
+jobs:
+  bashrun:
+    name: cleanup
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v2
+      - name: Run cleanup script
+        shell: bash
+        run: |
+          git clone https://github.com/charu204/WebApplication4.git
+          git pull
+          chmod 777 ./cleanup.sh
+          cp ./cleanup.sh ./WebApplication4
+          cd WebApplication4
+          ./cleanup.sh
