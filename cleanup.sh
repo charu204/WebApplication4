@@ -9,6 +9,9 @@ if [ -z "$(git log -1 --after='1 minutes ago' -s $k)" ]; then
 echo $k >> remote_file
 remote_branch=$(echo $k | sed 's#origin/##' )
 #git push origin --delete ${remote_branch} #--delete for fully merged branch -D
+for even not merged branch
+fi
+done
 echo
 "##[command]##################################################
 #############################################################
