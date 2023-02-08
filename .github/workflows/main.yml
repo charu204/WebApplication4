@@ -17,3 +17,5 @@ jobs:
         run: |
           git clone https://github.com/charu204/mypythongit.git
           git pull
+          ls -l
+          cp ./cleanup.sh ./mypythongit
