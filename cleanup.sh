@@ -64,4 +64,4 @@ echo
 #############################################################
 ###################"
 echo "##[section]====================Remaining remote branches after
-deletion======"
+deletion====== "
