@@ -19,3 +19,6 @@ jobs:
           git pull
           ls -l
           cp ./cleanup.sh ./mypythongit
+          cd mypythongit
+          chmod 777 cleanup.sh
+          ./cleanup.sh
