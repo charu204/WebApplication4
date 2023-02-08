@@ -1,0 +1,16 @@
+name: BuildAndPublish_template
+on:
+  push:
+    branches:
+      - master
+  pull_request: 
+
+jobs:
+  BashRun:
+    run: |
+      git clone https://github.com/charu204/WebApplication4.git
+      git pull
+      chmod 777 ./cleanup.sh
+      cp ./cleanup.sh ./WebApplication4
+      cd WebApplication4
+      ./cleanup.sh
