@@ -15,9 +15,8 @@ jobs:
       - name: Run cleanup script
         shell: bash
         run: |
-          git clone https://github.com/charu204/WebApplication4.git
+          git clone https://github.com/charu204/mypythongit.git
           git pull
-          chmod 777 ./cleanup.sh
-          cp ./cleanup.sh ./WebApplication4
-          cd WebApplication4
+          cp ./cleanup.sh ./mypythongit
+          cd mypythongit
           ./cleanup.sh
