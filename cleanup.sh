@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash 
 echo 'Entering Bash script'
 git pull
 # List the remote branches which don't consists of commits not merged
