@@ -3,14 +3,13 @@ echo 'Entering Bash script'
 git pull
 # List the remote branches which don't consists of commits not merged
 #git branch -r --merged | grep -v 'origin/HEAD'
-for k in $(git branch -r --merged | grep -v 'origin/HEAD' | grep -v 'master' | grep -v
-'origin/master' | grep -v 'charu' | grep -v 'shobhit' ); do
-if [ -z "$(git log -1 --after='1 minutes ago' -s $k)" ]; then
-echo $k >> remote_file
-remote_branch=$(echo $k | sed 's#origin/##' )
-#git push origin --delete ${remote_branch} #--delete for fully merged branch -D
-for even not merged branch
-fi
+for k in $(git branch -r --merged | grep -v 'origin/HEAD' | grep -v 'master' | grep -v 'origin/master' | grep -v 'charu' | grep -v 'shobhit' ); 
+do
+  if [ -z "$(git log -1 --after='1 minutes ago' -s $k)" ]; then
+    echo $k >> remote_file
+    remote_branch=$(echo $k | sed 's#origin/##' )
+    #git push origin --delete ${remote_branch} #--delete for fully merged branch -D
+  fi
 done
 echo
 "##[command]##################################################
